@@ -1,16 +1,17 @@
-// app/page.tsx
-import React from 'react';
-import Link from 'next/link';
+import HeroSection from "@/components/HeroSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import AboutSection from "@/components/AboutSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import CTASection from "@/components/CTASection";
 
 export default function Home() {
   return (
-    <main style={{ padding: 40, fontFamily: 'Inter, system-ui' }}>
-      <h1>TaskVision AI</h1>
-      <p>AI-powered task extraction and team planning dashboard.</p>
-      <div style={{ display: 'flex', gap: 12 }}>
-        <Link href="/login">Log in</Link>
-        <Link href="/signup">Sign up</Link>
-      </div>
+    <main className="flex flex-col items-center w-full overflow-x-hidden">
+      <HeroSection />
+      <FeaturesSection />
+      <AboutSection />
+      <TestimonialsSection />
+      <CTASection />
     </main>
   );
 }
